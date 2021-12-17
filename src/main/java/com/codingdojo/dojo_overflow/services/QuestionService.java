@@ -46,7 +46,7 @@ public class QuestionService {
 
 	//C.R.U.D.
 	public Question createQues(Question ques) {
-		ques.setTag(this.splitTags(ques.getFrontEndTags()));
+		ques.setTags(this.splitTags(ques.getFrontEndTags()));
 		return this.qRepo.save(ques);
 	}
 

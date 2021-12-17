@@ -56,7 +56,7 @@ public class Question {
 	}
 	
 	@OneToMany(mappedBy="question", fetch=FetchType.LAZY)
-	private List<Answer> answer;
+	private List<Answer> answers;
 	
 	
 	@ManyToMany(fetch = FetchType.LAZY)
@@ -102,15 +102,13 @@ public class Question {
 		this.updatedAt = updatedAt;
 	}
 
-	public List<Answer> getAnswer() {
-		return answer;
+	public List<Answer> getAnswers() {
+		return answers;
 	}
 
-	public void setAnswer(List<Answer> answer) {
-		this.answer = answer;
+	public void setAnswers(List<Answer> answers) {
+		this.answers = answers;
 	}
-
-	
 
 	public List<Tag> getTags() {
 		return tags;

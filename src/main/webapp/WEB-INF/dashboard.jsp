@@ -30,7 +30,7 @@
 				<c:otherwise>
 				<c:forEach items="${ques}" var="ques">
 				<tr>
-					<td><a href="#">${ques.question}</a></td>
+					<td><a href="/questions/${ques.id}">${ques.question}</a></td>
 					<c:forEach items="${ques.tags}" var="tag">
 					<td>${tag.subject}</td>
 					</c:forEach>
